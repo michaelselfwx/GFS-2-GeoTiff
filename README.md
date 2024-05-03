@@ -1,1 +1,1 @@
-# GFS2GeoTiff
+# GFS-2-GeoTiff
