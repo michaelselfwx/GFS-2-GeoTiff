@@ -1,7 +1,6 @@
 from herbie import Herbie, FastHerbie, HerbieLatest
 import xarray as xr
 import numpy as np
-import xarray as xr
 import rasterio
 from rasterio.transform import from_origin
 
