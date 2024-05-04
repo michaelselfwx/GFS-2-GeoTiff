@@ -233,4 +233,11 @@ Most of the explanation needed for this code has been either commented on direct
 | Band 8 | hlcy | Helicity @ 3000-0m above ground
 | Band 9 | absv | Absolute Vorticity @ 850mb
 
+### Required Dependencies
+Herbie (pip install herbie-data)
+Xarray (pip install xarray)
+NumPy-1.26 (pip install numpy)
+rasterio-1.3.10
+
+
 
