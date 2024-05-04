@@ -239,6 +239,16 @@ Xarray (pip install xarray)
 NumPy-1.26 (pip install numpy)  
 rasterio-1.3.10 (pip install rasterio)  
 
+### Example Video Demonstration
+
+##### Part 1
+https://github.com/michaelselfwx/GFS-2-GeoTiff/assets/151393601/b116b608-e6c6-42d1-be90-5b89cba122af
+
+##### Part 2
+https://github.com/michaelselfwx/GFS-2-GeoTiff/assets/151393601/f915afb3-0707-4d02-8b19-3786d795b948
+
+
+
 
 
 
