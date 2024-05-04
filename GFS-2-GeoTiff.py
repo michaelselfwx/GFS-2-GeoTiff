@@ -68,7 +68,7 @@ if period == "past":
     with rasterio.open(output_file, 'w', driver='GTiff', 
                        width=datasets[0].dims['longitude'], height=datasets[0].dims['latitude'], 
                        count=len(datasets), dtype='float32', 
-                       crs='EPSG:4326', transform=transform, names=band_names) as dst:
+                       crs='EPSG:4326', transform=transform, names=variable_names) as dst:
         for i, ds in enumerate(datasets):
             data = ds[list(ds.data_vars)[0]].values  # Get the data of the first variable in the dataset
             dst.write(data, i + 1)  # Write data to corresponding band
@@ -125,7 +125,7 @@ elif period == "current":
     with rasterio.open(output_file, 'w', driver='GTiff', 
                        width=datasets[0].dims['longitude'], height=datasets[0].dims['latitude'], 
                        count=len(datasets), dtype='float32', 
-                       crs='EPSG:4326', transform=transform, names=band_names) as dst:
+                       crs='EPSG:4326', transform=transform, names=variable_names) as dst:
         for i, ds in enumerate(datasets):
             data = ds[list(ds.data_vars)[0]].values  # Get the data of the first variable in the dataset
             dst.write(data, i + 1)  # Write data to corresponding band
@@ -191,7 +191,7 @@ elif period == "forecast":
     with rasterio.open(output_file, 'w', driver='GTiff', 
                        width=datasets[0].dims['longitude'], height=datasets[0].dims['latitude'], 
                        count=len(datasets), dtype='float32', 
-                       crs='EPSG:4326', transform=transform, names=band_names) as dst:
+                       crs='EPSG:4326', transform=transform, names=variable_names) as dst:
         for i, ds in enumerate(datasets):
             data = ds[list(ds.data_vars)[0]].values  # Get the data of the first variable in the dataset
             dst.write(data, i + 1)  # Write data to corresponding band
