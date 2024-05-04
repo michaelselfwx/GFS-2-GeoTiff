@@ -1,13 +1,13 @@
 # GFS-2-GeoTiff
 
 ### Introduction
-This repository was made for my final project in GIS Programming at the University of Florida. I am submitting this GitHub page/repository as my presentation portion of the final project, while the pseudocode and script are also here. This entire project is very much a culmination of all the things I have learned in this class. For this project exactly, I am using a python back-end which is an interactive front-end (for the user). This script ties into any GIS software, because it outputs a ‘.tif’ file which can be read by most. Even this README document has been made using skills I have learned in this class (such as making different sized headings with markup code). 
+This repository was made for my final project in GIS Programming at the University of Florida. I am submitting this GitHub page/repository as my presentation portion of the final project, while the pseudocode and script are also here. This entire project is very much a culmination of all the things I have learned in this class. For this project exactly, I am using a python back-end which is an interactive front-end (for the user). This script ties into any GIS software, because it outputs a ‘.tif’ file which can be read by most. Even this README document has been made using skills I have learned in this class (such as making different sized headings with markup code).  
 
 ### Pseudocode
-![Slide1](https://github.com/michaelselfwx/GFS-2-GeoTiff/assets/151393601/b335c52b-e8e5-4a03-8136-98eadef36090)
+![Slide1](https://github.com/michaelselfwx/GFS-2-GeoTiff/assets/151393601/b335c52b-e8e5-4a03-8136-98eadef36090)  
 
 ### What problem can this script solve?
-The reason I made this script was because I was trying to find a cool and fast way to get meteorological data into ArcGIS, so I could visualize it in a ‘nice’ format. I also have been using GFS model data in an internship I am working on this year, so it only made since for me to keep up with the Global Forecast System model. GRIB is such an annoying format to have to handle in python (or any other programming language), so a script like this makes it so much easier to visualize GFS data.
+The reason I made this script was because I was trying to find a cool and fast way to get meteorological data into ArcGIS, so I could visualize it in a ‘nice’ format. I also have been using GFS model data in an internship I am working on this year, so it only made since for me to keep up with the Global Forecast System model. GRIB is such an annoying format to have to handle in python (or any other programming language), so a script like this makes it so much easier to visualize GFS data.  
 
 ### Source Code
 ```ruby
@@ -214,10 +214,10 @@ elif period == "forecast":
             
 else:
     print("Try running the code again and make sure to spell 'past', 'current', or 'forecast' correctly!")
-```
+```  
 
 ### Explanation of Code
-Most of the explanation needed for this code has been either commented on directly in the script, or it is explained in the pseudocode. In simple terms, the script first determines if the user wants to know the current GFS data, past, or future (through a forecast). After this is determined, the code gets ‘focused’ to a specific section, since there are small tweaks that need to be made when working with past, current, or forecast GFS data. Then, by using Herbie, the GRIB2 files are converted over to Xarray datasets where they can finally be handled much easier. Once this is done, it is then made into a GeoTiff using Rasterio, with 9 different variables included (which is shown in the below ‘Band Table’).
+Most of the explanation needed for this code has been either commented on directly in the script, or it is explained in the pseudocode. In simple terms, the script first determines if the user wants to know the current GFS data, past, or future (through a forecast). After this is determined, the code gets ‘focused’ to a specific section, since there are small tweaks that need to be made when working with past, current, or forecast GFS data. Then, by using Herbie, the GRIB2 files are converted over to Xarray datasets where they can finally be handled much easier. Once this is done, it is then made into a GeoTiff using Rasterio, with 9 different variables included (which is shown in the below ‘Band Table’).  
 
 ### Band Table
 
@@ -231,13 +231,16 @@ Most of the explanation needed for this code has been either commented on direct
 | Band 6 | u | U-component of wind @ 10m above ground
 | Band 7 | v | V-component of wind @ 10m above ground
 | Band 8 | hlcy | Helicity @ 3000-0m above ground
-| Band 9 | absv | Absolute Vorticity @ 850mb
+| Band 9 | absv | Absolute Vorticity @ 850mb  
 
 ### Required Dependencies
-Herbie (pip install herbie-data)
-Xarray (pip install xarray)
-NumPy-1.26 (pip install numpy)
-rasterio-1.3.10
+Herbie (pip install herbie-data) or (pip install git+https://github.com/blaylockbk/Herbie.git)   
+Xarray (pip install xarray)  
+NumPy-1.26 (pip install numpy)  
+rasterio-1.3.10 (pip install rasterio)  
+
+
+
 
 
 
