@@ -215,3 +215,19 @@ elif period == "forecast":
 else:
     print("Try running the code again and make sure to spell 'past', 'current', or 'forecast' correctly!")
 ```
+### Explanation of Code
+Most of the explanation needed for this code has been either commented on directly in the script, or it is explained in the pseudocode. In simple terms, the script first determines if the user wants to know the current GFS data, past, or future (through a forecast). After this is determined, the code gets ‘focused’ to a specific section, since there are small tweaks that need to be made when working with past, current, or forecast GFS data. Then, by using Herbie, the GRIB2 files are converted over to Xarray datasets where they can finally be handled much easier. Once this is done, it is then made into a GeoTiff using Rasterio, with 9 different variables included (which is shown in the below ‘Band Table’).
+
+| Band # | Short Name | Full Description |
+| --- | --- | --- |
+| Band 1 | tmp | Air Temperature @ 2m above ground  
+| Band 2 | dpt | Dewpoint Temperature @ 2m above ground
+| Band 3 | rh | Relative Humidity @ 2m above ground
+| Band 4 | prate | Precipitation Rate @ surface
+| Band 5 | refc | Composite Reflectivity @ entire atmosphere
+| Band 6 | u | U-component of wind @ 10m above ground
+| Band 7 | v | V-component of wind @ 10m above ground
+| Band 8 | hlcy | Helicity @ 3000-0m above ground
+| Band 9 | absv | Absolute Vorticity @ 850mb
+
+
